@@ -21,7 +21,7 @@ RunTime :
 ```
 ## iPerf-Client
 ```
-PS C:\Users\support4> $SpeedTest = iPerf-Client 192.168.11.55 -MBytes 1000 -LogWrite
+PS C:\Users\support4> $SpeedTest = iPerf-Client 192.168.1.55 -MBytes 1000 -LogWrite
 PS C:\Users\support4> $SpeedTest
 
 
