@@ -6,7 +6,7 @@ Module for test network channel performance. Creat metrics from PSObject and rec
 PS C:\Users\support4> iPerf-Server -Start -Port 5201
 PS C:\Users\support4> iPerf-Server -Status | fl
 
-Server  : uk-vproxy-04
+Server  : vproxy-04
 Status  : Running
 Port    : 5201
 RunTime : 00:00:03
@@ -14,7 +14,7 @@ RunTime : 00:00:03
 PS C:\Users\support4> iPerf-Server -Stop
 PS C:\Users\support4> iPerf-Server -Status | fl
 
-Server  : uk-vproxy-04
+Server  : vproxy-04
 Status  : Stopped
 Port    :
 RunTime :
@@ -25,8 +25,8 @@ PS C:\Users\support4> $SpeedTest = iPerf-Client 192.168.11.55 -MBytes 1000 -LogW
 PS C:\Users\support4> $SpeedTest
 
 
-Client          : 192.168.55.2:50956
-Server          : 192.168.11.55:5201
+Client          : 192.168.2.2:50956
+Server          : 192.168.1.55:5201
 Protocol        : TCP
 Streams         : 1
 Start_Time      : 5/10/2023 5:38:04 PM
