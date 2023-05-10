@@ -1,10 +1,25 @@
 # PS-iPerf
-Module for test network channel performance. Creat PSObject metrics and out to log file.
+Module for test network channel performance. Creat metrics from PSObject and record to log file.
 
 ## iPerf-Server
+```
+PS C:\Users\support4> iPerf-Server -Start -Port 5201
+PS C:\Users\support4> iPerf-Server -Status | fl
 
+Server  : uk-vproxy-04
+Status  : Running
+Port    : 5201
+RunTime : 00:00:03
+
+PS C:\Users\support4> iPerf-Server -Stop
+PS C:\Users\support4> iPerf-Server -Status | fl
+
+Server  : uk-vproxy-04
+Status  : Stopped
+Port    :
+RunTime :
+```
 ## iPerf-Client
-
 ```
 PS C:\Users\support4> $SpeedTest = iPerf-Client 192.168.11.55 -MBytes 1000 -LogWrite
 PS C:\Users\support4> $SpeedTest
@@ -45,3 +60,20 @@ Start_Seconds End_Seconds Run_Seconds Transfer_MBytes Speed_MBits
 ```
 
 ## Logs
+```
+PS C:\Users\support4> iPerf-Client -LogRead
+
+Date       Time     Download     Upload
+----       ----     --------     ------
+05/10/2023 16:48:47 125.95 MBits 126.00 MBits
+05/10/2023 16:50:35 126.84 MBits 126.88 MBits
+05/10/2023 16:59:57 75.57 MBits  75.59 MBits
+05/10/2023 17:02:20 130.11 MBits 130.15 MBits
+05/10/2023 17:09:10 141.29 MBits 141.34 MBits
+05/10/2023 17:09:53 80.29 MBits  80.32 MBits
+05/10/2023 17:17:34 144.44 MBits 144.57 MBits
+05/10/2023 17:18:55 140.51 MBits 140.63 MBits
+05/10/2023 17:23:00 139.82 MBits 139.84 MBits
+05/10/2023 17:26:40 141.11 MBits 141.13 MBits
+05/10/2023 17:38:04 138.24 MBits 138.26 MBits
+```
