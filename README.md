@@ -25,7 +25,7 @@ PS C:\Users\support4> $SpeedTest = iPerf-Client 192.168.1.55 -MBytes 1000 -LogWr
 PS C:\Users\support4> $SpeedTest
 
 
-Client          : 192.168.2.2:50956
+Client          : 192.168.5.2:50956
 Server          : 192.168.1.55:5201
 Protocol        : TCP
 Streams         : 1
