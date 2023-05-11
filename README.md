@@ -1,6 +1,5 @@
 # PS-iPerf
-Module for check network performance, example for measure the communication channel inside an IPSec/GRE tunnel. \
-Creating metrics for output to console PSObject and log file.
+Module for check network performance, example for measure the communication channel inside an IPSec/GRE tunnel. Creating metrics for output to console PSObject and log file.
 
 ## iPerf-Server
 ```
