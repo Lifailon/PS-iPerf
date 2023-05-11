@@ -3,7 +3,7 @@ Module for test network channel performance. Creat metrics from PSObject and rec
 
 ## iPerf-Server
 ```
-PS C:\Users\support4> iPerf-Server -Start -Port 5201
+PS C:\Users\support4> iPerf-Server -Start
 PS C:\Users\support4> iPerf-Server -Status | fl
 
 Server  : vproxy-04
