@@ -2,6 +2,9 @@
 Module for check network performance, example for measure the communication channel inside an IPSec/GRE tunnel. Creating metrics for output to console PSObject and log file. \
 The measurement is used to [iperf3](https://github.com/esnet/iperf) [(version 3.1.3)](https://iperf.fr/iperf-download.php)
 
+## Install
+Copy path **PS-iPerf** to one of the dectories `$env:PSModulePath.Split(";")`
+
 ## iPerf-Server
 ```
 PS C:\Users\support4> iPerf-Server -Start
