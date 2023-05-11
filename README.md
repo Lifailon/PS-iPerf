@@ -24,7 +24,6 @@ RunTime :
 PS C:\Users\support4> $SpeedTest = iPerf-Client 192.168.1.55 -MBytes 1000 -LogWrite
 PS C:\Users\support4> $SpeedTest
 
-
 Client          : 192.168.5.2:50956
 Server          : 192.168.1.55:5201
 Protocol        : TCP
@@ -38,8 +37,6 @@ Intervals       : {@{Start_Seconds=0; End_Seconds=5; Run_Seconds=5.01; Transfer_
                   @{Start_Seconds=5; End_Seconds=10; Run_Seconds=4.99; Transfer_MBytes=94; Speed_MBits=150.72},
                   @{Start_Seconds=10; End_Seconds=15; Run_Seconds=5.01; Transfer_MBytes=89.125; Speed_MBits=142.24},
                   @{Start_Seconds=15; End_Seconds=20; Run_Seconds=4.99; Transfer_MBytes=86.5; Speed_MBits=138.67}...}
-
-
 
 PS C:\Users\support4> $SpeedTest.Intervals | ft
 
@@ -59,7 +56,7 @@ Start_Seconds End_Seconds Run_Seconds Transfer_MBytes Speed_MBits
            55          58 2.86                 47.625 133.20
 ```
 
-## Logs
+## Log
 ```
 PS C:\Users\support4> iPerf-Client -LogRead
 
@@ -79,3 +76,16 @@ Date       Time     Download     Upload
 ```
 
 ![Image alt](https://github.com/Lifailon/PS-iPerf/blob/rsa/Screen/iperf-logfile.jpg)
+
+## Report to Telegram
+```
+PS C:\Users\support4> iPerf-ReportToTelegram -Server 192.168.1.55 -MBytes 500 -Trigger 150 -Token_Bot 5517149522:AAFop4
+_darMpTT7VgLpY2hjkDkkV1dzmGNM -Id_Chat -609779646
+
+  ok result
+  -- ------
+True @{message_id=377334; from=; chat=; date=1683787385; text=Low network channel upload speed: 138.73 MBits; entiti...
+True @{message_id=377335; from=; chat=; date=1683787385; text=Low network channel download speed: 145.60 MBits; enti...
+```
+
+![Image alt](https://github.com/Lifailon/PS-iPerf/blob/rsa/Screen/iperf-report.jpg)
