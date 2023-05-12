@@ -67,7 +67,7 @@ Start_Seconds End_Seconds Run_Seconds Transfer_MBytes Speed_MBits
            25          29 4.48                 77.125 137.65
 ```
 ## Log
-![Image alt](https://github.com/Lifailon/PS-iPerf/blob/rsa/Screen/iperf-log.jpg)
+![Image alt](https://github.com/Lifailon/PS-iPerf/blob/rsa/Screen/iPerf-Log.jpg)
 
 ```
 PS C:\Users\support4> Get-iPerfLog
