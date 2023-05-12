@@ -5,7 +5,7 @@ The measurement is used to [iperf3](https://github.com/esnet/iperf) [(version 3.
 Copy directory **PS-iPerf** to one of the dectories: `$env:PSModulePath.Split(";")`
 
 Example: \
-`Copy-Item -Path .\PS-iPerf "$home\Documents\WindowsPowerShell\Modules\ -Recurse"`
+`Copy-Item -Path .\PS-iPerf "$home\Documents\WindowsPowerShell\Modules\" -Recurse`
 ## Cmdlet
 ```
 PS C:\Users\support4> Import-Module PS-iPerf
