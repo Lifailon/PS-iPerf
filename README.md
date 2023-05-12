@@ -3,9 +3,18 @@ Module for check network performance, example for measure the communication chan
 The measurement is used to [iperf3](https://github.com/esnet/iperf) [(version 3.1.3)](https://iperf.fr/iperf-download.php)
 
 ## Install
-Copy directory **PS-iPerf** to one of the dectories: `$env:PSModulePath.Split(";")` \
+Copy directory **PS-iPerf** to one of the dectories: `$env:PSModulePath.Split(";")`
+
 Example: \
 `Copy-Item -Path .\PS-iPerf "$home\Documents\WindowsPowerShell\Modules\ -Recurse"`
+
+## Cmdlet
+**Connect-iPerfServer
+Get-iPerfLog
+Start-iPerfServer
+Get-iPerfServer
+Stop-iPerfServer
+Test-iPerfToTelegram**
 
 ## iPerf-Server
 ```
