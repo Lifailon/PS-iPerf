@@ -10,6 +10,7 @@ Example: \
 ```
 PS C:\Users\support4> Import-Module PS-iPerf
 PS C:\Users\support4> (Get-Module PS-iPerf).ExportedCommands.Keys
+
 Connect-iPerfServer
 Get-iPerfLog
 Get-iPerfServer
@@ -94,6 +95,6 @@ True @{message_id=377336; from=; chat=; date=1683881278; text=Low network channe
 True @{message_id=377337; from=; chat=; date=1683881279; text=Low network channel download speed: 141.95 MBits; enti...
 ```
 
-> Set parameters for Token_Bot, Id_Chat (line 148-149) and add command to the task scheduler.
+> Set parameters for Token_Bot, Id_Chat (line 148-149) and add command to the **Task Scheduler**.
 
 ![Image alt](https://github.com/Lifailon/PS-iPerf/blob/rsa/Screen/iPerf-Alert.jpg)
