@@ -1,22 +1,40 @@
 # PS-iPerf
 Module for check network performance, example for measure the communication channel inside an IPSec/GRE tunnel. Creating metrics for output to console PSObject and log file. \
 The measurement is used to [iperf3](https://github.com/esnet/iperf) [(version 3.1.3)](https://iperf.fr/iperf-download.php)
-
 ## Install
 Copy directory **PS-iPerf** to one of the dectories: `$env:PSModulePath.Split(";")`
 
 Example: \
 `Copy-Item -Path .\PS-iPerf "$home\Documents\WindowsPowerShell\Modules\ -Recurse"`
-
 ## Cmdlet
-**Start-iPerfServer** \
-**Get-iPerfServer** \
-**Stop-iPerfServer** \
-**Connect-iPerfServer** \
-**Get-iPerfLog** \
-**Test-iPerfToTelegram**
-
+```
+PS C:\Users\support4> Import-Module PS-iPerf
+PS C:\Users\support4> (Get-Module PS-iPerf).ExportedCommands.Keys
+Connect-iPerfServer
+Get-iPerfLog
+Get-iPerfServer
+Start-iPerfServer
+Stop-iPerfServer
+Test-iPerfToTelegram
+```
 ## Server
+```
+PS C:\Users\support4> Start-iPerfServer
+PS C:\Users\support4> Get-iPerfServer | fl
+
+Server  : vproxy-04
+Status  : Running
+Port    : 5201
+RunTime : 00:00:05
+
+PS C:\Users\support4> Stop-iPerfServer
+PS C:\Users\support4> Get-iPerfServer | fl
+
+Server  : vproxy-04
+Status  : Stopped
+Port    :
+RunTime :
+```
 
 ## Client
 
