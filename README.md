@@ -37,6 +37,49 @@ RunTime :
 ```
 
 ## Client
+```
+PS C:\Users\support4> $SpeedTest = Connect-iPerfServer -Server 192.168.11.55 -MBytes 500 -LogWrite
+PS C:\Users\support4> $SpeedTest
+
+Client          : 192.168.5.2:59272
+Server          : 192.168.1.55:5201
+Protocol        : TCP
+Streams         : 1
+Start_Time      : 5/12/2023 11:33:07 AM
+Run_Time        : 29 sec
+Transfer_MBytes : 500
+Upload_MBits    : 135.64
+Download_MBits  : 135.60
+Intervals       : {@{Start_Seconds=0; End_Seconds=5; Run_Seconds=5.00; Transfer_MBytes=81.875; Speed_MBits=130.98},
+                  @{Start_Seconds=5; End_Seconds=10; Run_Seconds=5.00; Transfer_MBytes=81.375; Speed_MBits=130.12},
+                  @{Start_Seconds=10; End_Seconds=15; Run_Seconds=5.00; Transfer_MBytes=86.375; Speed_MBits=138.19},
+                  @{Start_Seconds=15; End_Seconds=20; Run_Seconds=5.00; Transfer_MBytes=87.5; Speed_MBits=140.04}...}
+
+PS C:\Users\support4> $SpeedTest.Intervals | ft
+
+Start_Seconds End_Seconds Run_Seconds Transfer_MBytes Speed_MBits
+------------- ----------- ----------- --------------- -----------
+            0           5 5.00                 81.875 130.98
+            5          10 5.00                 81.375 130.12
+           10          15 5.00                 86.375 138.19
+           15          20 5.00                   87.5 140.04
+           20          25 5.00                  85.75 137.07
+           25          29 4.48                 77.125 137.65
+```
+## Log
+![Image alt](https://github.com/Lifailon/PS-iPerf/blob/rsa/Screen/iperf-log.jpg)
+
+```
+PS C:\Users\support4> Get-iPerfLog
+
+Date       Time     Download     Upload
+----       ----     --------     ------
+05/12/2023 11:16:32 117.84 MBits 117.87 MBits
+05/12/2023 11:17:48 129.06 MBits 129.10 MBits
+05/12/2023 11:21:04 137.52 MBits 137.55 MBits
+05/12/2023 11:32:00 137.88 MBits 137.93 MBits
+05/12/2023 11:33:07 135.60 MBits 135.64 MBits
+```
 
 ## iPerf-ReportToTelegram
 Sending notifications to Telegram if the trigger (**-Trigger**) value is lower than the specified value in MBits.
