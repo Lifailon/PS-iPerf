@@ -85,7 +85,7 @@ Date       Time     Download     Upload
 Sending alert to Telegram if the trigger (key: **-Trigger**) value is lower than the specified value in MBits.
 
 ```
-PS C:\Users\support4> Test-iPerfToTelegram -Server 192.168.11.55 -MBytes 500 -Trigger 150 -Token_Bot 5517149522:AAFop4_d
+PS C:\Users\support4> Test-iPerfToTelegram -Server 192.168.1.55 -MBytes 500 -Trigger 150 -Token_Bot 5517149522:AAFop4_d
 arMpTT7VgLpY2hjkDkkV1dzmGNM -Id_Chat -609779646
 
   ok result
@@ -96,4 +96,4 @@ True @{message_id=377337; from=; chat=; date=1683881279; text=Low network channe
 
 > Set parameters for Token_Bot, Id_Chat (line 148-149) and add command to the task scheduler.
 
-![Image alt](https://github.com/Lifailon/PS-iPerf/blob/rsa/Screen/iperf-report.jpg)
+![Image alt](https://github.com/Lifailon/PS-iPerf/blob/rsa/Screen/iPerf-Alert.jpg)
