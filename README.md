@@ -81,11 +81,11 @@ Date       Time     Download     Upload
 05/12/2023 11:33:07 135.60 MBits 135.64 MBits
 ```
 
-## iPerf-ReportToTelegram
-Sending notifications to Telegram if the trigger (**-Trigger**) value is lower than the specified value in MBits.
+## Test iPerf to Telegram
+Sending alert to Telegram if the trigger (key: **-Trigger**) value is lower than the specified value in MBits.
 
 ```
-PS C:\Users\support4> iPerf-ReportToTelegram -Server 192.168.1.55 -MBytes 500 -Trigger 150 -Token_Bot 5517149522:AAFop4
+PS C:\Users\support4> Test-iPerfToTelegram -Server 192.168.1.55 -MBytes 500 -Trigger 150 -Token_Bot 5517149522:AAFop4
 _darMpTT7VgLpY2hjkDkkV1dzmGNM -Id_Chat -609779646
 
   ok result
